@@ -42,9 +42,9 @@ if __name__ == '__main__':
     rospy.init_node('trajectory', anonymous=True)
     worldFrame = rospy.get_param("~worldFrame", "/world")
 
-    trajectory0 = np.array( pd.read_csv('~/Desktop/crazyflies/trajectory0.csv') )
-    trajectory1 = np.array( pd.read_csv('~/Desktop/crazyflies/trajectory1.csv') )
-    trajectory2 = np.array( pd.read_csv('~/Desktop/crazyflies/trajectory2.csv') )
+    trajectory0 = np.array( pd.read_csv('trajectory0.csv') )
+    trajectory1 = np.array( pd.read_csv('trajectory1.csv') )
+    trajectory2 = np.array( pd.read_csv('trajectory2.csv') )
 
     cf18 = crazyflie.Crazyflie("crazyflie18", "/vicon/crazyflie18/crazyflie18")
     cf15 = crazyflie.Crazyflie("crazyflie15", "/vicon/crazyflie15/crazyflie15")
